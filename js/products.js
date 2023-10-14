@@ -6,6 +6,92 @@ const products = {
   menulist: [
     // FLOWERS API
     {
+      id: 90,
+      productName: "Youth With You",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Youth with You.jpg",
+    },
+    {
+      id: 91,
+      productName: "Flamingo Rose",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Bahamas Flamingo Pink Rose.jpg",
+    },
+    {
+      id: 92,
+      productName: "Cappuccino Rose",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Cappuccino rose.jpg",
+    },
+    {
+      id: 93,
+      productName: "Golden Sun",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Golden warm sun.jpg",
+    },
+    {
+      id: 94,
+      productName: "Heart Love",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Love in the heart.jpg",
+    },
+    {
+      id: 95,
+      productName: "All Seasons",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Love you for all seasons.jpg",
+    },
+    {
+      id: 96,
+      productName: "Heartfelt Love",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/love you with all my heart.jpg",
+    },
+    {
+      id: 97,
+      productName: "Intention",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/The original intention is the same.jpg",
+    },
+
+    {
+      id: 98,
+      productName: "Warm Years",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Warm years.jpg",
+    },
+    {
+      id: 99,
+      productName: "Concerning You",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Concerning You.jpg",
+    },
+    {
+      id: 100,
+      productName: "Princess' Holiday",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/Princess’s Holiday.jpg",
+    },
+    {
+      id: 101,
+      productName: "Silent Love",
+      category: "flowers, bouquet, sale, featured",
+      price: 3500,
+      image: "../img/featured/Bouquets/silent love1.jpg",
+    },
+
+    {
       id: 1,
       productName: "Sweet & Pretty",
       category: "flowers, bouquet, best selling flowers",
@@ -780,12 +866,11 @@ function updateProductList(productsToDisplay) {
           <img id="image${data.id}" src="${data.image}" class="img-fluid pt-2 px-2">
       
           <div class="card-body">
-              <p class="card-title text-center" id="menu${data.id}">${data.productName}</p>
+              <p class="card-title fw-bold text-dark text-center" id="menu${data.id}">${data.productName}</p>
+              <p class="card-text text-dark text-center mb-3" id="price${data.id}">₱ ${data.price}.00</p>
 
-              <p class="card-text text-center" id="price${data.id}">₱ ${data.price}.00</p>
-              
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                  <button class="btn btn-sm me-2" onclick="addToWishlist(${data.id})"><i class="fa-regular fa-heart"></i></button>
+                  <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="fa-regular fa-heart"></i></button>
                   <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="fa-solid fa-cart-shopping"></i></button>
               </div>
           </div>

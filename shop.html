@@ -333,8 +333,10 @@
         <div class="row">
             <div class="col-sm-3">
                 <h4 class="fw-bold pt-3 mb-4">Menu Categories</h4>
-                <p class="fw-bold">Featured Products</p>
-                <p class="fw-bold">Flowers<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <button onclick="filterProductsByCategory('sale')" class="d-block fw-bold mb-2">
+                    <p class="fw-bold">Featured & Sale</p>
+                </button>
+                <p class="fw-bold text-dark">Flowers<i class="bi bi-caret-down-fill ms-1"></i></p>
                 <ul class=" list-unstyled mb-3">
                     <button onclick="filterProductsByCategory('flowers')" class="d-block">
                         <li class="ps-4 mb-3">All Flowers</li>
@@ -353,7 +355,7 @@
                     </button>
                 </ul>
 
-                <p class="fw-bold">Plants<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <p class="fw-bold text-dark">Plants<i class="bi bi-caret-down-fill ms-1"></i></p>
                 <ul class="list-unstyled mb-3">
                     <button onclick="filterProductsByCategory('plants')" class="d-block">
                         <li class="ps-4 mb-3">All Plants</li>
@@ -372,7 +374,7 @@
                     </button>
                 </ul>
 
-                <p class="fw-bold">Gifts<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <p class="fw-bold text-dark">Gifts<i class="bi bi-caret-down-fill ms-1"></i></p>
                 <ul class="list-unstyled mb-3">
                     <button onclick="filterProductsByCategory('gifts')" class="d-block">
                         <li class="ps-4 mb-3">All Gifts</li>
