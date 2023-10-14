@@ -2857,6 +2857,53 @@ mark {
 /*----------------------------------------*/
 /*-- Shop Sidebar Area Start --*/
 
+/* Additional */
+.shop-section .btn-group,
+.shop-section .input-group #search-input,
+.shop-section .input-group button {
+  border-radius: 0;
+  border: 1px solid #4b0082;
+  font-size: 14px;
+}
+
+.shop-section .input-group button {
+  background-color: #4b0082;
+  color: #fff;
+  padding: 10px;
+}
+
+.shop-section .btn-group,
+.shop-section .dropdown-menu {
+  padding: 10px;
+  width: 100%;
+}
+
+.shop-section .dropdown-menu {
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.shop-section .btn-group button {
+  color: #4b0082;
+  font-size: 14px;
+}
+
+#menu-list .card {
+  height: 100%;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#menu-list .card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+#menu-list .card-text {
+  flex-grow: 1;
+}
+
 .shop-main-area .sidebar_widget .widget_inner .widget-title,
 .blog-main-area .sidebar_widget .widget_inner .widget-title {
   font-weight: 700;
@@ -7574,7 +7621,7 @@ mark {
 /*    Components - Breadcrumb
 /*----------------------------------------*/
 .breadcrumbs-area {
-  padding: 100px 0;
+  padding: 100px 0 50px;
   background: #f6f6f6 url("../img/slider/hero-bg.png") no-repeat scroll center
     center/cover;
 }

@@ -4,7 +4,7 @@
 	   Sticky Menu Activation
 	---------------------------------*/
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 300) {
+    if ($(this).scrollTop() > 100) {
       $(".header-sticky").addClass("sticky");
     } else {
       $(".header-sticky").removeClass("sticky");
@@ -394,7 +394,7 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
     },
   });
-  
+
   /*--------------------------
 	 Ajax Contact Form JS
 	---------------------------*/

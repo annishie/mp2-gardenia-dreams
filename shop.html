@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Sign Up | Gardenia Dreams</title>
+    <title>Shop | Gardenia Dreams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -74,7 +74,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="active" href="login.html">
+                                        <a class="active" href="">
                                             <span class="menu-text">Log In</span>
                                         </a>
                                     </li>
@@ -294,7 +294,7 @@
                         <h3 class="title-3">Gardenia Dreams</h3>
                         <ul>
                             <li><a href="/html/landingpage.html">Home</a></li>
-                            <li>Signup</li>
+                            <li>Shop</li>
                         </ul>
                     </div>
                 </div>
@@ -302,53 +302,102 @@
         </div>
     </div>
 
-    <!-- Log In Section -->
-    <div class="login-register-area p-5 my-5">
-        <div class="container container-default-2 custom-area">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-custom">
-                    <div class="login-register-wrapper">
-                        <div class="section-content text-center mb-5">
-                            <h2 class="title-4 mb-2">Create Your Account</h2>
-                            <p class="desc-content">Fill out the following below using your desired information.
-                            </p>
-                        </div>
-                        <form action="#" method="post">
-                            <div class="single-input-item mb-1">
-                                <input type="text" placeholder="First Name">
-                            </div>
-                            <div class="single-input-item mb-1">
-                                <input type="text" placeholder="Last Name">
-                            </div>
-                            <div class="single-input-item mb-1">
-                                <input type="email" placeholder="Email Address">
-                            </div>
-                            <div class="single-input-item mb-1">
-                                <input type="password" placeholder="Enter Password">
-                            </div>
-                            <div class="single-input-item mb-1">
-                                <input type="password" placeholder="Confirm Password">
-                            </div>
-                            <div class="text-center">
-                                <div class="single-input-item mb-5">
-                                    <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                    <label class="custom-control-label" for="rememberMe">Subscribe Our
-                                        Newsletter</label>
-                                </div>
-                                <div class="single-input-item mb-3">
-                                    <button class="btn gardenia-button secondary-btn theme-color rounded-0"><i
-                                            class="bi bi-box-arrow-in-right me-2"></i>Sign Up</button>
-                                </div>
-                                <div class="single-input-item">
-                                    <a href="login.html">Already a member? Sign In</a>
-                                </div>
-                            </div>
+    <!-- Shop Section -->
+    <div class="shop-section p-5 m-5">
+        <!-- Sort & Search Row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="btn-group mb-3">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort By
+                    </button>
+                    <ul class="dropdown-menu" id="sort-dropdown">
+                        <li><a class="dropdown-item" href="#" onclick="sortProducts('lowToHigh')">Price from Low
+                                to High</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortProducts('highToLow')">Price from
+                                High to Low</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <input id="search-input" type="text" class="form-control" placeholder="Search products..."
+                        aria-label="Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class="btn" type="button" id="search-button">Search</button>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h4 class="fw-bold pt-3 mb-4">Menu Categories</h4>
+                <p class="fw-bold">Featured Products</p>
+                <p class="fw-bold">Flowers<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <ul class=" list-unstyled mb-3">
+                    <button onclick="filterProductsByCategory('flowers')" class="d-block">
+                        <li class="ps-4 mb-3">All Flowers</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('best selling flowers')" class="d-block">
+                        <li class="ps-4 mb-3">Best Selling Flowers</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('new arrivals')" class="d-block">
+                        <li class="ps-4 mb-3">New Arrivals</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('luxury')" class="d-block">
+                        <li class="ps-4 mb-3">Luxury Flowers</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('set')" class="d-block">
+                        <li class="ps-4">Flower Sets</li>
+                    </button>
+                </ul>
+
+                <p class="fw-bold">Plants<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <ul class="list-unstyled mb-3">
+                    <button onclick="filterProductsByCategory('plants')" class="d-block">
+                        <li class="ps-4 mb-3">All Plants</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('best selling plants')" class="d-block">
+                        <li class="ps-4 mb-3">Best Selling Plants</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('indoor plants')" class="d-block">
+                        <li class="ps-4 mb-3">Indoor Plants</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('pet friendly plants')" class="d-block">
+                        <li class="ps-4 mb-3">Pet Friendly Plants</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('bonsai')" class="d-block">
+                        <li class="ps-4">Bonsai & Bamboo Plants</li>
+                    </button>
+                </ul>
+
+                <p class="fw-bold">Gifts<i class="bi bi-caret-down-fill ms-1"></i></p>
+                <ul class="list-unstyled mb-3">
+                    <button onclick="filterProductsByCategory('gifts')" class="d-block">
+                        <li class="ps-4 mb-3">All Gifts</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('best selling gifts')" class="d-block">
+                        <li class="ps-4 mb-3">Best Selling Gifts</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('DIY gifts')" class="d-block">
+                        <li class="ps-4 mb-3">DIY Gifts</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('teddy bear')" class="d-block">
+                        <li class="ps-4 mb-3">Teddy Bears</li>
+                    </button>
+                    <button onclick="filterProductsByCategory('birthday')" class="d-block">
+                        <li class="ps-4">Birthday Bundles</li>
+                    </button>
+                </ul>
+
+            </div>
+            <div class="col-sm-9">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="row" id="menu-list"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -482,12 +531,17 @@
     <!-- jquery magnific popup js -->
     <script src="/js/plugins/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom JS -->
-    <script src="/js/main.js"></script>
+    <!-- Custom API -->
+    <script src="js/products.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            renderProducts();
+        window.addEventListener("scroll", function () {
+            var headerSticky = document.querySelector(".header-sticky");
+            if (window.pageYOffset > 100) {
+                headerSticky.classList.add("sticky");
+            } else {
+                headerSticky.classList.remove("sticky");
+            }
         });
     </script>
 
