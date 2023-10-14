@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.nav-link,
+#search-input,
+#search-button,
+.accordion-button,
+.accordion-collapse ul li,
+.dropdown-menu.show,
+.tab-content td {
+  font-size: 14px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.input-group input.form-control,
+.input-group button.btn {
+  border-radius: 0;
+  z-index: 0;
+  margin-top: 30vh;
+}
+
+.btn-outline-success.dropdown-toggle,
+.dropdown-menu.show {
+  border-radius: 0;
+}
+
+.dropdown-toggle,
+#search-input {
+  border: 1px solid #1b1b1b;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+#search-button {
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.btn-group,
+.dropdown-menu.show {
+  width: 100%;
+}
+
+#product-list,
+#wish-list {
+  margin-top: 130px;
+}
+
+#wish-list select {
+  border-radius: 0;
+}
+
+.product-category {
+  height: 60px;
+  width: 100%;
+  color: white;
+}
+
+.product-category .container {
+  justify-content: center;
+  margin: auto;
+}
+
+.product-list .card {
+  border-radius: 0;
+  border: 0;
+  height: 350px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#wish-list .card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.accordion-button,
+#menu-list .card-title {
+  font-weight: 600;
+}
+
+.accordion-body button {
+  border: 0;
+  /* padding: 0; */
+  width: 100%;
+  text-align: start;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-item {
+  border: none;
+}
+
+#menu-list .card-title,
+#wish-list .card-title {
+  font-size: 13px;
+}
+
+#cart-div .card-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#cart-div .card {
+  border: 1px solid #dedede;
+  box-shadow: none;
+}
+
+#menu-list .card-text,
+#wish-list .card-text,
+#wish-list .btn {
+  font-size: 12px;
+}
+
+#wish-list .btn {
+  border: 1px solid #1b1b1b;
+}
+
+#wish-list .remove {
+  position: absolute;
+  font-size: 19px;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+}
+
+#wish-list .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.span .me-1{
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  font-size: 11px;
+  border-radius: 4px;
+}
+
+/* .qty span {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #dedede;
+  color: black;
+  font-size: 14px;
+}
+
+.qty span.num {
+  border: 0;
+} */
+
+.menu-footer p {
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+#cart-div .btn {
+  border: 1px solid red;
+  color: red;
+}
+
+#cart-div .btn:hover {
+  border: 1px solid red;
+  background-color: red;
+  color: #fff;
+}
+
+.sticky-footer {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px -2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.sticky-footer button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 0;
+  width: 250px;
+}
+
+.sticky-footer button:hover {
+  border: 1px solid red;
+  background-color: rgba(0, 0, 0, 0);
+  color: red;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.modal-content,
+.modal-content button {
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.modal-content .btn-addToCart {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+.modal-content .btn-addToCart:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  color: #000;
+  font-size: 14px;
+}
