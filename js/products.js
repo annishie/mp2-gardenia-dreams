@@ -797,7 +797,6 @@ function addToWishlist(id) {
 
   localStorage.setItem(wishlistItem, JSON.stringify(orderedlist));
   alert("Added To Wishlist.");
-  window.location.href = window.location.href;
 }
 
 // ADD TO CART *****************************************************************
@@ -833,7 +832,6 @@ function addToCart(id) {
 
   localStorage.setItem(cartItem, JSON.stringify(orderedlist));
   alert("Added To Cart.");
-  window.location.href = window.location.href;
 }
 
 // SEARCH PRODUCTS *********************************************************************

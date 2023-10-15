@@ -13,6 +13,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/vendor/font.awesome.min.css">
     <!-- Linear Icons CSS -->
@@ -71,7 +74,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="active" href="">
+                                        <a id="login-link" class="active" href="#">
                                             <span class="menu-text">Log In</span>
                                         </a>
                                     </li>
@@ -82,7 +85,7 @@
                             <div class="header-right-area main-nav">
                                 <ul class="nav">
                                     <li class="minicart-wrap">
-                                        <a href="" class="minicart-btn toolbar-btn">
+                                        <a href="cart.html" class="minicart-btn toolbar-btn">
                                             <i class="bi bi-cart-fill"></i>
                                             <span class="cart-item_count"></span>
                                         </a>
@@ -309,35 +312,33 @@
                             <h2 class="title-4 mb-2">Log In</h2>
                             <p class="desc-content">Please login using account credentials below.</p>
                         </div>
-                        <form>
-                            <div class="single-input-item mb-1">
-                                <input type="email" id="email" placeholder="Email Address">
-                            </div>
-                            <div class="single-input-item mb-1">
+                        <div class="single-input-item mb-1">
+                            <input type="email" id="email" placeholder="Email Address">
+                        </div>
+                        <div class="single-input-item mb-1">
 
-                                <input type="password" id="password" placeholder="Password">
-                            </div>
-                            <div class="single-input-item mb-3">
-                                <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
-                                    <div class="remember-meta mb-3">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="rememberMe">
-                                            <label class="custom-control-label" for="rememberMe">Remember Me</label>
-                                        </div>
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                        <div class="single-input-item mb-3">
+                            <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
+                                <div class="remember-meta mb-3">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                        <label class="custom-control-label" for="rememberMe">Remember Me</label>
                                     </div>
-                                    <a href="#" class="forget-pwd mb-3">Forget Password?</a>
                                 </div>
+                                <a href="#" class="forget-pwd mb-3">Forget Password?</a>
                             </div>
-                            <div class="text-center">
-                                <div class="single-input-item mb-3">
-                                    <button class="btn gardenia-button secondary-btn theme-color rounded-0"
-                                        onclick="login()"><i class="bi bi-box-arrow-in-right me-2"></i>Log In</button>
-                                </div>
-                                <div class="single-input-item">
-                                    <a href="signup.html">Not a member yet? Create Account</a>
-                                </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="single-input-item mb-3">
+                                <button class="btn gardenia-button secondary-btn theme-color rounded-0"
+                                    onclick="login()"><i class="bi bi-box-arrow-in-right me-2"></i>Log In</button>
                             </div>
-                        </form>
+                            <div class="single-input-item">
+                                <a href="signup.html">Not a member yet? Create Account</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -478,10 +479,33 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 
+    <!-- Login JS -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            renderProducts();
-        });
+        // Check if the "login" key is present in sessionStorage
+        if (sessionStorage.getItem("login")) {
+            // Replace the "Log In" link with "Account"
+            const loginLink = document.getElementById("login-link");
+            if (loginLink) {
+                loginLink.innerHTML = '<span class="menu-text">Account</span>';
+                loginLink.href = "#"; // Update the link's href as needed
+            }
+        }
+
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (email == "" || password == "") {
+                alert("Please enter a valid email or password.");
+                location.reload();
+            } else {
+                let login_arr = [];
+                login_arr.push({ email: email });
+                sessionStorage.setItem("login", JSON.stringify(login_arr));
+                alert("You have successfully logged in.");
+                location.replace("shop.html");
+            }
+        }
     </script>
 
 </body>

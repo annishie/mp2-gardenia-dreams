@@ -35,27 +35,7 @@
     $("body").removeClass("fix");
     $(".off-canvas-menu-wrapper").removeClass("open");
   });
-  /*----------------------------------------*/
-  /*  Cart Plus Minus Button
-	/*----------------------------------------*/
-  $(".cart-plus-minus").append(
-    '<div class="dec qtybutton"><i class="fa fa-minus"></i></div><div class="inc qtybutton"><i class="fa fa-plus"></i></div>'
-  );
-  $(".qtybutton").on("click", function () {
-    var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
-    if ($button.hasClass("inc")) {
-      var newVal = parseFloat(oldValue) + 1;
-    } else {
-      // Don't allow decrementing below zero
-      if (oldValue > 1) {
-        var newVal = parseFloat(oldValue) - 1;
-      } else {
-        newVal = 1;
-      }
-    }
-    $button.parent().find("input").val(newVal);
-  });
+
   /*----------------------------------------*/
   /* Toggle Function Active
 	/*----------------------------------------*/

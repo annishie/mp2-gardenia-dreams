@@ -7,7 +7,8 @@ function displayCartItems() {
   const cartTableBody = document.getElementById("cart-div");
 
   if (cartItems.length === 0) {
-    cartTableBody.innerHTML = "<tr><td colspan='6' class='text-center'>No items added yet.</td></tr>";
+    cartTableBody.innerHTML =
+      "<tr><td colspan='6' class='text-center'>No items added yet.</td></tr>";
     return;
   }
 
@@ -17,7 +18,7 @@ function displayCartItems() {
       return `
       <tr>
       <td class="pro-thumbnail">
-        <button onclick="deleteThisItem(${index})"><i class="bi bi-x-circle"></i></button>
+        <button onclick="deleteThisItem(${index})"><i class="bi bi-x-circle-fill"></i></button>
         <img class="img-fluid" src="${item.image}" alt="Product">
       </td>
       <td class="pro-title">${item.productName}</td>
@@ -29,7 +30,9 @@ function displayCartItems() {
           <span class="qtybtn plus" onclick="addQty(${item.id})">+</span>
         </div>
       </td>
-      <td class="pro-subtotal">₱${formatAccounting(item.quantity * item.price)}</td>
+      <td class="pro-subtotal">₱${formatAccounting(
+        item.quantity * item.price
+      )}</td>
     </tr>    
     `;
     })
@@ -38,33 +41,17 @@ function displayCartItems() {
   cartTableBody.innerHTML = cartHTML;
 }
 
-
 function displayTotal() {
   const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   let total = 0;
-  let itemCount = 0;
-  
-  cartItems.forEach((item) => {
-    const subtotalElement = document.getElementById(`subtotal${item.id}`);
-    const subtotal = parseFloat(subtotalElement.innerText.replace(/[^0-9.]/g, ''));
-    total += subtotal;
 
-    itemCount += item.quantity;
+  cartItems.forEach((item) => {
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
   });
 
-  // OVERALL TOTAL AMOUNT
-  const overallTotal = total + 38;
-  
-
   const totalElement = document.getElementById("subTotal");
-  totalElement.innerText = `${formatAccounting(total)}`;
-
-  // ITEM COUNT
-  const totalItemsElement = document.getElementById("totalItems");
-  totalItemsElement.innerText = `Item(s): ${itemCount}`;
-
-  const overallTotalElement = document.getElementById("overAll");
-  overallTotalElement.innerText = `Total Amount: ${formatAccounting(overallTotal)}`;
+  totalElement.innerText = `₱ ${formatAccounting(total)}`;
 }
 
 function addQty(itemId) {

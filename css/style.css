@@ -194,15 +194,15 @@ button,
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
-hr {
+/* hr {
   margin: 60px 0;
   padding: 0px;
   border-bottom: 1px solid #eceff8;
   border-top: 0px;
-}
+} */
 
 .mark,
 mark {
@@ -2738,13 +2738,13 @@ mark {
 /*    05 - Layout - Footer
 /*----------------------------------------*/
 .footer-area .footer-widget-area {
-  padding: 100px 0;
+  padding: 70px 0;
   background-color: #6626a1;
 }
 
 @media (max-width: 991px) {
   .footer-area .footer-widget-area {
-    padding: 60px 0px 50px 0;
+    padding: 60px 0 50px;
   }
 }
 
@@ -2857,7 +2857,12 @@ mark {
 /*----------------------------------------*/
 /*-- Shop Sidebar Area Start --*/
 
-/* Additional */
+/* Additional c/o PRECIOUS */
+
+.menu-categories button {
+  background: transparent;
+}
+
 .shop-section .btn-group,
 .shop-section .input-group #search-input,
 .shop-section .input-group button {
@@ -2902,6 +2907,30 @@ mark {
 
 #menu-list .card-text {
   flex-grow: 1;
+}
+
+.btn-checkout {
+  width: 200px;
+  border: 1px solid #4b0082;
+  background-color: #4b0082;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 15px;
+  border-radius: 0;
+  font-weight: 600;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.btn-checkout:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #4b0082;
+  color: #4b0082;
+}
+
+.modal .btn {
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 .shop-main-area .sidebar_widget .widget_inner .widget-title,
@@ -4726,7 +4755,7 @@ mark {
 }
 
 .cart-table .table thead tr th {
-  border-color: #eceff8;
+  border-color: rgb(153, 153, 153);
   border-bottom: 0 solid transparent;
   color: #000000;
   font-size: 15px;
@@ -4742,7 +4771,7 @@ mark {
 }
 
 .cart-table .table tr {
-  border-color: #eceff8;
+  border-color: rgb(153, 153, 153);
 }
 
 .cart-table .table tr .pro-thumbnail,
@@ -4765,12 +4794,12 @@ mark {
 }
 
 /* Style for the "x" icon */
-.pro-thumbnail i.bi-x-circle {
+.pro-thumbnail i.bi-x-circle-fill {
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
-  padding: 3px 6px 0;
+  padding: 3px 10px 0;
 }
 
 .pro-thumbnail img {
@@ -4778,7 +4807,7 @@ mark {
 }
 
 .cart-table .table tbody td {
-  border-color: #eceff8;
+  border-color: rgb(153, 153, 153);
   text-align: center;
   padding: 10px 20px;
   vertical-align: middle;
