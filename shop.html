@@ -85,7 +85,7 @@
                                     <li class="minicart-wrap">
                                         <a href="cart.html" class="minicart-btn toolbar-btn">
                                             <i class="bi bi-cart-fill"></i>
-                                            <span class="cart-item_count"></span>
+                                            <span class="cart-item_count" id="cartNotifCount"></span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-wrap">
@@ -559,6 +559,16 @@
                 location.replace("shop.html");
             }
         }
+
+        // CART LENGTH
+        function countCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            const itemCount = cartItems.length;
+            return itemCount;
+        }
+        const cartItemCountElement = document.getElementById("cartNotifCount");
+        const itemCount = countCartItems();
+        cartItemCountElement.textContent = `${itemCount}`;
     </script>
 
 </body>
