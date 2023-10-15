@@ -10,14 +10,14 @@ const products = {
       productName: "Youth With You",
       category: "flowers, bouquet, sale, featured",
       price: 3500,
-      image: "/img/featured/Bouquets/Youth with You.jpg",
+      image: "img/featured/Bouquets/Youth with You.jpg",
     },
     {
       id: 91,
       productName: "Flamingo Rose",
       category: "flowers, bouquet, sale, featured",
       price: 3500,
-      image: "/img/featured/Bouquets/Bahamas Flamingo Pink Rose.jpg",
+      image: "img/featured/Bouquets/Bahamas Flamingo Pink Rose.jpg",
     },
     {
       id: 92,
