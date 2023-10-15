@@ -17,21 +17,21 @@ const products = {
       productName: "Flamingo Rose",
       category: "flowers, bouquet, sale, featured",
       price: 3500,
-      image: "../img/featured/Bouquets/Bahamas Flamingo Pink Rose.jpg",
+      image: "/img/featured/Bouquets/Bahamas Flamingo Pink Rose.jpg",
     },
     {
       id: 92,
       productName: "Cappuccino Rose",
       category: "flowers, bouquet, sale, featured",
       price: 3500,
-      image: "../img/featured/Bouquets/Cappuccino rose.jpg",
+      image: "/img/featured/Bouquets/Cappuccino rose.jpg",
     },
     {
       id: 93,
       productName: "Golden Sun",
       category: "flowers, bouquet, sale, featured",
       price: 3500,
-      image: "../img/featured/Bouquets/Golden warm sun.jpg",
+      image: "/img/featured/Bouquets/Golden warm sun.jpg",
     },
     {
       id: 94,
@@ -740,8 +740,8 @@ const products = {
               <p class="card-text text-dark text-center mb-3" id="price${data.id}">₱ ${data.price}.00</p>
 
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                  <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="fa-regular fa-heart"></i></button>
-                  <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="bi bi-heart"></i></button>
+                  <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus"></i></button>
               </div>
           </div>
       </div>
@@ -870,8 +870,8 @@ function updateProductList(productsToDisplay) {
               <p class="card-text text-dark text-center mb-3" id="price${data.id}">₱ ${data.price}.00</p>
 
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                  <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="fa-regular fa-heart"></i></button>
-                  <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="bi bi-heart"></i></button>
+                <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus"></i></button>
               </div>
           </div>
         </div>
