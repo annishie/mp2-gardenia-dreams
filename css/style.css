@@ -2944,6 +2944,41 @@ mark {
   color: #4b0082;
 }
 
+.payment-form input,
+.payment-form textarea {
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.payment-method {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.btn-shipping-options {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #dedede;
+  font-size: 14px;
+  padding: 5px 0;
+  border-radius: 0;
+}
+
+.btn-shipping-options:hover {
+  border: 2px solid black;
+}
+
+.btn-shipping-options.clicked {
+  border: 2px solid black; /* Change the border style when clicked */
+}
+
+.btn-place-order {
+  background-color: #4b0082;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 0;
+}
+
 .modal .btn {
   padding: 8px 12px;
   font-size: 14px;
@@ -5392,10 +5427,6 @@ mark {
 .your-order .your-order-table table .order-total th {
   border-bottom: medium none;
   font-size: 18px;
-}
-
-.payment-method {
-  margin-top: 20px;
 }
 
 .payment-method .payment-accordion .card {
