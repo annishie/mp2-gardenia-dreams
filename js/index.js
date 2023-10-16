@@ -16,9 +16,14 @@ function countCartItems() {
   const itemCount = cartItems.length;
   return itemCount;
 }
+
 const cartItemCountElement = document.getElementById("cartNotifCount");
+const anotherElement = document.getElementById("itemCount");
+
 const itemCount = countCartItems();
-cartItemCountElement.textContent = `${itemCount}`;
+
+cartItemCountElement.textContent = itemCount; // Update the first element
+anotherElement.textContent = itemCount; // Update the second element
 
 // ========================================= REPLACING "LOGIN" LINK IF LOGIN KEY IS PRESENT =======================
 if (sessionStorage.getItem("login")) {
