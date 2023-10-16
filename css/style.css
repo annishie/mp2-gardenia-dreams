@@ -2723,7 +2723,7 @@ mark {
 
 @media (max-width: 479px) {
   .mobile-navigation {
-    padding: 30px;
+    padding: 0 30px;
   }
 }
 

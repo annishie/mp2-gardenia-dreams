@@ -730,7 +730,7 @@ const products = {
     let menulist = "";
     this.menulist.forEach(function (data) {
       menulist += `
-      <div class="col-md-3 col-12 p-2">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-2">
       <div class="card mb-3 position-relative">
           <p id="ids${data.id}" hidden>${data.id}</p>
           <img id="image${data.id}" src="${data.image}" class="img-fluid pt-2 px-2">
@@ -864,7 +864,7 @@ function updateProductList(productsToDisplay) {
   } else {
     productsToDisplay.forEach(function (data) {
       menulist += `
-          <div class="col-3">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-2">
         <div class="card mb-3 position-relative">
           <p id="ids${data.id}" hidden>${data.id}</p>
           <img id="image${data.id}" src="${data.image}" class="img-fluid pt-2 px-2">
