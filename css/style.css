@@ -512,7 +512,7 @@ mark {
 
 /* ---Our Story---*/
 .background-image {
-  background: url("img/our-story.jpg") no-repeat center center fixed;
+  background: url("../img/our-story.jpg") no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
@@ -6435,17 +6435,17 @@ mark {
 /*-- Slider Animation From Hero --*/
 
 .slide-1 {
-  background-image: url("img/slider/jisooo.png");
+  background-image: url("../img/slider/jisooo.png");
   background-color: rgba(226, 128, 16, 0.87);
 }
 
 .slide-2 {
-  background-image: url("img/slider/2.png");
+  background-image: url("../img/slider/2.png");
   background-color: rgba(210, 91, 240, 0.87);
 }
 
 .slide-3 {
-  background-image: url("img/slider/3.png");
+  background-image: url("../img/slider/3.png");
   background-color: rgba(226, 128, 16, 0.87);
 }
 
