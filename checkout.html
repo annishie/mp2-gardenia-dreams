@@ -423,7 +423,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn btn-place-order">Place Order</button>
+                        <button class="btn btn-place-order" data-bs-toggle="modal" data-bs-target="#placeOrder">Place
+                            Order</button>
                     </div>
                 </div>
             </div>
@@ -574,6 +575,14 @@
 
     <!-- Login JS -->
     <script>
+        if (sessionStorage.getItem("login")) {
+            const loginLink = document.getElementById("login-link");
+            if (loginLink) {
+                loginLink.innerHTML = '<span class="menu-text">Account</span>';
+                loginLink.href = "account.html";
+            }
+        }
+
         function login() {
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
@@ -600,10 +609,8 @@
                 button.classList.add('clicked');
             });
         });
-    </script>
 
-
-    <script>
+        // CART ITEMS
         function displayTotal() {
             const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
             let total = 0;
@@ -622,8 +629,33 @@
             totalAmountElement.innerText = `₱ ${formatAccounting(totalAmount)}`;
         }
         displayTotal();
+
+        // PLACE ORDER
+        function placeOrder() {
+            localStorage.removeItem("cart");
+            alert("You have successfully placed this order.");
+            location.reload()
+        }
     </script>
 
+
+    <!-- PLACE ORDER MODAL -->
+    <div class="modal fade" id="placeOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fw-bold fs-5" id="exampleModalLabel">Place Order</h3>
+                </div>
+                <div class="modal-body text-black">
+                    Are you sure you want to place this order?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="placeOrder()">Yes, place order.</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

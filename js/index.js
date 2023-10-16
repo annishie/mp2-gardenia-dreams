@@ -22,14 +22,5 @@ const anotherElement = document.getElementById("itemCount");
 
 const itemCount = countCartItems();
 
-cartItemCountElement.textContent = itemCount; // Update the first element
-anotherElement.textContent = itemCount; // Update the second element
-
-// ========================================= REPLACING "LOGIN" LINK IF LOGIN KEY IS PRESENT =======================
-if (sessionStorage.getItem("login")) {
-  const loginLink = document.getElementById("login-link");
-  if (loginLink) {
-    loginLink.innerHTML = '<span class="menu-text">Account</span>';
-    loginLink.href = "account.html";
-  }
-}
+cartItemCountElement.textContent = itemCount;
+anotherElement.textContent = itemCount;

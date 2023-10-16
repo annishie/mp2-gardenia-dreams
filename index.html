@@ -717,6 +717,15 @@
         document.addEventListener("DOMContentLoaded", function () {
             renderProducts();
         });
+
+        if (sessionStorage.getItem("login")) {
+            const loginLink = document.getElementById("login-link");
+            if (loginLink) {
+                loginLink.innerHTML = '<span class="menu-text">Account</span>';
+                loginLink.href = "account.html";
+            }
+        }
+
     </script>
 
 </body>
