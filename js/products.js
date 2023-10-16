@@ -803,6 +803,12 @@ function addToWishlist(id) {
 function addToCart(id) {
   const itemId = id.toString();
 
+  if (!sessionStorage.getItem("login")) {
+    alert("Please login first.");
+    window.location.href = "login.html";
+    return;
+  }
+
   if (isItemAlreadyInStorage(cartItem, itemId)) {
     alert("You already added this item.");
     return;
