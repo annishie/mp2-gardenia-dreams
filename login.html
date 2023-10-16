@@ -427,8 +427,11 @@
                         <div class="single-footer-widget">
                             <h2 class="widget-title">Get In Touch</h2>
                             <div class="widget-body">
-                                <address>123, ABC, Road ##, Main City, Your address goes here.<br>Phone: (+63)
-                                    456 7890 123<br>Email: info@gardeniadreams.com</address>
+                                <address><i class="bi bi-geo-alt me-2"></i>123 Happy St., Metro Manila,
+                                    Philippines<br><i class="bi bi-telephone me-2"></i>Phone:
+                                    (+63)
+                                    456 7890 123<br><i class="bi bi-envelope me-2"></i>Email: info@gardeniadreams.com
+                                </address>
                             </div>
                         </div>
                     </div>
@@ -477,20 +480,10 @@
     <script src="js/plugins/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- Login JS -->
     <script>
-        // Check if the "login" key is present in sessionStorage
-        if (sessionStorage.getItem("login")) {
-            // Replace the "Log In" link with "Account"
-            const loginLink = document.getElementById("login-link");
-            if (loginLink) {
-                loginLink.innerHTML = '<span class="menu-text">Account</span>';
-                loginLink.href = "#"; // Update the link's href as needed
-            }
-        }
-
         function login() {
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
@@ -506,16 +499,6 @@
                 location.replace("shop.html");
             }
         }
-
-        // CART LENGTH
-        function countCartItems() {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            const itemCount = cartItems.length;
-            return itemCount;
-        }
-        const cartItemCountElement = document.getElementById("cartNotifCount");
-        const itemCount = countCartItems();
-        cartItemCountElement.textContent = `${itemCount}`;
     </script>
 
 </body>

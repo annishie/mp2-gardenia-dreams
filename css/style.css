@@ -197,12 +197,9 @@ button,
   /* background-color: transparent; */
 }
 
-/* hr {
-  margin: 60px 0;
-  padding: 0px;
-  border-bottom: 1px solid #eceff8;
-  border-top: 0px;
-} */
+hr {
+  color: #666666;
+}
 
 .mark,
 mark {
@@ -2859,8 +2856,27 @@ mark {
 
 /* Additional c/o PRECIOUS */
 
+.copyright-text {
+  margin-top: 100px;
+  text-align: center;
+  color: #c3c3c3;
+}
+
 .menu-categories button {
   background: transparent;
+}
+
+.menu-categories .btn-addToCart {
+  background: transparent;
+  border: 1px solid #dedede;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.menu-categories .btn-addToCart:hover {
+  background-color: #4b0082;
+  border: 1px solid #4b0082;
+  color: #fff;
 }
 
 .shop-section .btn-group,

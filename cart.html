@@ -82,7 +82,7 @@
                                     <li class="minicart-wrap">
                                         <a href="" class="minicart-btn toolbar-btn">
                                             <i class="bi bi-cart-fill"></i>
-                                            <span class="cart-item_count"></span>
+                                            <span class="cart-item_count" id="cartNotifCount"></span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-wrap">
@@ -430,10 +430,13 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-custom">
                         <div class="single-footer-widget">
-                            <h2 class="widget-title">See Information</h2>
+                            <h2 class="widget-title">Get In Touch</h2>
                             <div class="widget-body">
-                                <address>123, ABC, Road ##, Main City, Your address goes here.<br>Phone: (+63)
-                                    456 7890 123<br>Email: info@gardeniadreams.com</address>
+                                <address><i class="bi bi-geo-alt me-2"></i>123 Happy St., Metro Manila,
+                                    Philippines<br><i class="bi bi-telephone me-2"></i>Phone:
+                                    (+63)
+                                    456 7890 123<br><i class="bi bi-envelope me-2"></i>Email: info@gardeniadreams.com
+                                </address>
                             </div>
                         </div>
                     </div>
@@ -489,22 +492,12 @@
     <script src="js/plugins/jquery.magnific-popup.min.js"></script>
 
     <!-- Main JS -->
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
     <!-- Custom JS -->
     <script src="js/cart.js"></script>
     <script src="js/products.js"></script>
 
     <script>
-        // CART LENGTH
-        function countCartItems() {
-            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-            const itemCount = cartItems.length;
-            return itemCount;
-        }
-        const cartItemCountElement = document.getElementById("cart-item-count");
-        const itemCount = countCartItems();
-        cartItemCountElement.textContent = `${itemCount}`;
-
         // REFRESH CART
         document.getElementById('refreshCart').addEventListener('click', function () {
             location.reload();
