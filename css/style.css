@@ -1157,6 +1157,7 @@ mark {
 }
 
 /*--- Swiper Navigation Style ---*/
+
 .intro11-carousel-wrap .swiper-button-prev,
 .intro11-carousel-wrap .swiper-button-next {
   opacity: 0;
@@ -1270,6 +1271,7 @@ mark {
     right: 0px;
   }
 }
+
 
 /* ---Bootstrap No Gutters--- */
 .no-gutters {
@@ -7948,3 +7950,28 @@ mark {
     172
   ); /* Change 'green' to the color you desire */
 }
+
+
+/* CUSTOM MEDIA QUERIES */
+
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next,
+  .breadcrumb-content h3 {
+    display: none;
+  }
+
+  .footer-area {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links .d-flex {
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .breadcrumb-content ul {
+    padding-top: 30px
+  }
+} 
