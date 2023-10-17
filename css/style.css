@@ -2564,7 +2564,7 @@ mark {
 -----------------------------*/
 .search-box-offcanvas {
   margin-bottom: 10px;
-  padding: 20px 40px 0px 40px;
+  padding: 0 40px;
 }
 
 @media (max-width: 479px) {
@@ -2718,7 +2718,7 @@ mark {
 }
 
 .mobile-navigation {
-  padding: 30px 40px 30px 40px;
+  padding: 20px 40px;
 }
 
 @media (max-width: 479px) {

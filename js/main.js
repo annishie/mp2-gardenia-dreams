@@ -647,7 +647,7 @@ function renderProducts() {
                       <span class="regular-price ">₱${product.price}</span>
                       <span class="old-price"><del>₱${product.oldPrice}</del></span>
                   </div>
-                  <a href="cart.html" class="btn product-cart"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                  <button class="btn btn-sm" onclick="addToCart(${product.id})"><i class="bi bi-bag-plus me-1"></i>Add To Cart</button>
                 </div>
               </div>
             <!--Single Product End-->
@@ -671,21 +671,3 @@ document.addEventListener("DOMContentLoaded", function () {
     displayComparisonTable();
   }
 });
-
-// // // //Login Functions / Register
-
-// function login() {
-//   let email = document.getElementById("email").value;
-//   let password = document.getElementById("password").value;
-
-//   if (email == "" || password == "") {
-//     alert("Please enter a valid email or password.");
-//     location.reload();
-//   } else {
-//     let login_arr = [];
-//     login_arr.push({ email: email });
-//     sessionStorage.setItem("login", JSON.stringify(login_arr));
-//     alert("You have successfully logged in.");
-//     location.replace("/products/");
-//   }
-// }

@@ -838,6 +838,7 @@ function addToCart(id) {
 
   localStorage.setItem(cartItem, JSON.stringify(orderedlist));
   alert("Added To Cart.");
+  location.reload();
 }
 
 // SEARCH PRODUCTS *********************************************************************

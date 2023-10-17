@@ -304,10 +304,6 @@
                             <a href="shop.html"><button class="btn btn-checkout me-3"><i
                                         class="bi bi-arrow-left-circle me-2"></i>Continue Shopping</button></a>
 
-                            <button id="refreshCart" class="btn btn-checkout me-3"><i
-                                    class="bi bi-arrow-clockwise me-2"></i>Refresh
-                                Cart</button>
-
                             <button data-bs-toggle="modal" data-bs-target="#clearCartModal" class="btn btn-checkout"><i
                                     class="bi bi-trash me-2"></i>Delete All
                                 Items</button>
@@ -336,7 +332,7 @@
                                 <td></td>
                                 <td></td>
                                 <td class="fw-bold">Total Amount</td>
-                                <td class="fw-bold" id="subTotal">PHP</td>
+                                <td class="fw-bold" id="cartAmount">PHP</td>
                             </tr>
                         </table>
                         <div class="container p-0 d-flex justify-content-end">
@@ -504,11 +500,6 @@
             }
         }
 
-        // REFRESH CART
-        document.getElementById('refreshCart').addEventListener('click', function () {
-            location.reload();
-        });
-
         // CLEAR CART
         function clearCart() {
             localStorage.removeItem("cart");
@@ -523,6 +514,19 @@
         }
         redirectToLoginPageIfNotLoggedIn('login.html');
 
+        function countCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            const itemCount = cartItems.length;
+            return itemCount;
+        }
+
+        const cartItemCountElement = document.getElementById("cartNotifCount");
+        const anotherElement = document.getElementById("itemCount");
+
+        const itemCount = countCartItems();
+
+        cartItemCountElement.textContent = itemCount;
+        anotherElement.textContent = itemCount;
     </script>
 
 
