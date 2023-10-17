@@ -628,14 +628,7 @@ function renderProducts() {
                   </a>
 
                   <span class="onsale">Sale!</span>
-                    <div class="add-action d-flex flex-column position-absolute">
-                      <a href="wishlist.html" title="Add To Wishlist">
-                          <i class="bi bi-heart"></i>
-                      </a>
-                      <a href="#exampleModalCenter" title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                          <i class="bi bi-eye"></i>
-                      </a>
-                    </div>
+                    
                 </div>
 
                 <div class="product-content">
@@ -647,10 +640,8 @@ function renderProducts() {
                       <span class="regular-price ">₱${product.price}</span>
                       <span class="old-price"><del>₱${product.oldPrice}</del></span>
                   </div>
-                  <button class="btn btn-sm" onclick="addToCart(${product.id})"><i class="bi bi-bag-plus me-1"></i>Add To Cart</button>
                 </div>
               </div>
-            <!--Single Product End-->
         `;
 
     return productCard.outerHTML;

@@ -1,4 +1,3 @@
-let wishlistItem = "wishlist";
 let cartItem = "cart";
 
 const products = {
@@ -752,8 +751,6 @@ const products = {
   },
 };
 
-orderedlist = localStorage.getItem(wishlistItem);
-
 products.showproducts();
 
 // ITEM CHECKER
@@ -762,42 +759,6 @@ function isItemAlreadyInStorage(itemKey, itemId) {
   return items.some((item) => item.id === itemId);
 }
 
-// ADD TO WISHLIST *****************************************************************
-function addToWishlist(id) {
-  const itemId = id.toString();
-
-  if (isItemAlreadyInStorage(wishlistItem, itemId)) {
-    alert("You already added this item.");
-    return;
-  }
-
-  let orderedlist = JSON.parse(localStorage.getItem(wishlistItem)) || [];
-
-  const existingItemIndex = orderedlist.findIndex((item) => item.id === id);
-
-  let new_id = document.getElementById("ids" + id).innerText;
-  let new_order = document.getElementById("menu" + id).innerText;
-  let new_price = parseFloat(
-    document
-      .getElementById("price" + id)
-      .innerText.replace("₱", "")
-      .replace(".00", "")
-  );
-  let new_image = document.getElementById("image" + id).src;
-
-  orderedlist.push({
-    id: new_id,
-    productName: new_order,
-    price: new_price,
-    quantity: 1,
-    item: "wishlist",
-    totalPrice: new_price,
-    image: new_image,
-  });
-
-  localStorage.setItem(wishlistItem, JSON.stringify(orderedlist));
-  alert("Added To Wishlist.");
-}
 
 // ADD TO CART *****************************************************************
 function addToCart(id) {
@@ -875,7 +836,6 @@ function updateProductList(productsToDisplay) {
               <p class="card-text text-dark text-center mb-3" id="price${data.id}">₱ ${data.price}.00</p>
 
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                <button class="btn btn-sm me-4" onclick="addToWishlist(${data.id})"><i class="bi bi-heart"></i></button>
                 <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus"></i></button>
               </div>
           </div>
