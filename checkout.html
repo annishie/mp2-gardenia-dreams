@@ -468,6 +468,16 @@
     <script src="js/index.js"></script>
     <script src="js/cart.js"></script>
 
+    <script>
+        // REQUIRES LOGIN IF "LOGIN" KEY IS NOT PRESENT
+        function redirectToLoginPageIfNotLoggedIn(redirectPage) {
+            if (!sessionStorage.getItem('login')) {
+                window.location.href = redirectPage;
+            }
+        }
+        redirectToLoginPageIfNotLoggedIn('login.html');
+    </script>
+
     <!-- Login JS -->
     <script>
         $(".off-canvas-btn").on("click", function () {

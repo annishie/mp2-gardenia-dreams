@@ -387,6 +387,17 @@
     <script src="js/products.js"></script>
 
     <script>
+        // REQUIRES LOGIN IF "LOGIN" KEY IS NOT PRESENT
+        function redirectToLoginPageIfNotLoggedIn(redirectPage) {
+            if (!sessionStorage.getItem('login')) {
+                window.location.href = redirectPage;
+            }
+        }
+        redirectToLoginPageIfNotLoggedIn('login.html');
+    </script>
+
+
+    <script>
         $(".off-canvas-btn").on("click", function () {
             $("body").addClass("fix");
             $(".off-canvas-wrapper").addClass("open");
