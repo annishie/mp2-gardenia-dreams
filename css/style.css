@@ -413,7 +413,7 @@ mark {
 
 @media (max-width: 479px) {
   .section-title .section-title-1 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
@@ -478,7 +478,7 @@ mark {
 
 @media (max-width: 767px) {
   .section-title .section-title-large {
-    font-size: 70px;
+    font-size: 25px;
   }
 }
 
@@ -490,7 +490,7 @@ mark {
 
 @media (max-width: 479px) {
   .section-title .section-title-large {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
 
@@ -2756,7 +2756,7 @@ mark {
 
 @media (max-width: 767px) {
   .footer-area .footer-widget-area {
-    padding: 60px 0px 37px 0;
+    padding: 30px 0px 37px 0;
   }
 }
 
@@ -2865,8 +2865,19 @@ mark {
 
 /* Additional c/o PRECIOUS */
 
+.payment-section,
+.profile-section {
+  padding: 50px 30px;
+}
+
 .team-member-area img {
   width: 400px;
+}
+
+@media (max-width: 479px) {
+  .team-member-area {
+    padding: 20px;
+  }
 }
 
 .copyright-text {
@@ -5836,17 +5847,24 @@ mark {
   border: 1px solid #4b0082;
 }
 
-/* .login-register-area {
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 25px;
-} */
+.login-register-area {
+  margin: 50px 0;
+}
 
 /*----------------------------------------*/
 /*    03 - Global - Color
 /*----------------------------------------*/
 .about-area .about-image img {
   width: 100%;
+}
+
+@media (max-width: 479px) {
+  .collection-content {
+    text-align: center;
+  }
+  .collection-content .desc-content {
+    font-size: 13px;
+  }
 }
 
 .about-area .section-title-wrap .title {
@@ -5947,6 +5965,12 @@ mark {
 
 .ht-team-member .team-info .name {
   font-size: 24px;
+}
+
+@media (max-width: 479px) {
+  .ht-team-member .team-info .name {
+    font-size: 20px;
+  }
 }
 
 .ht-team-member-style-one .ht-team-member {
@@ -7961,9 +7985,24 @@ mark {
     display: none;
   }
 
+  .breadcrumbs-area .breadcrumb-content ul li a {
+    font-size: 14px;
+  }
+
   .footer-area {
     align-items: center;
     text-align: center;
+  }
+
+  .footer-area .single-footer-widget .desc-content,
+  .footer-area .single-footer-widget .widget-list li a,
+  .footer-area .single-footer-widget .widget-body address,
+  .footer-area .footer-copyright-area .copyright-content {
+    font-size: 12px;
+  }
+
+  .footer-area .single-footer-widget .widget-title {
+    font-size: 18px;
   }
 
   .social-links .d-flex {
@@ -7974,4 +8013,54 @@ mark {
   .breadcrumb-content ul {
     padding-top: 30px
   }
+
+  /* ABOUT */
+  .history-area-content {
+    padding: 0 20px 40px;
+  }
+
+  /* LOGIN */
+  .login-register-area {
+    padding: 20px;
+    margin: 0;
+  }
+
+  .login-register-area .desc-content {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .login-register-area .login-reg-form-meta, 
+  .login-register-area input[type="checkbox"] + label,
+    .login-register-area a{
+    font-size: 12px;
+  }
+
+  .payment-section {
+    padding: 35px 20px;
+  }
+
+        .table-responsive {
+            display: block;
+        }
+
+        .table-responsive thead {
+            display: none;
+        }
+
+        .table-responsive tbody tr {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .table-responsive tbody td {
+            display: block;
+            text-align: left;
+        }
+
+        .table-responsive tbody td::before {
+            content: attr(data-th) ": ";
+            font-weight: bold;
+        }
+
 } 

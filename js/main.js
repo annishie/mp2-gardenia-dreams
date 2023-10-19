@@ -620,12 +620,10 @@ function renderProducts() {
     productCard.innerHTML = `
             <!--Single Product Start-->
               <div class="card single-product position-relative mb-30">
-                <div class="product-image">
-                  <a class="d-block" href="product-details.html">
+                <div class="product-image"> 
                     <img src="${product.image1}" alt="" class="product-image-1 w-100">
                     <img src="${product.image2}" alt="" class="product-image-2 position-absolute w-100">
                     <img src="${product.image3}" alt="" class="product-image-3 position-absolute w-100">
-                  </a>
 
                   <span class="onsale">Sale!</span>
                     

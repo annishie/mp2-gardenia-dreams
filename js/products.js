@@ -739,8 +739,7 @@ const products = {
               <p class="card-text text-dark text-center mb-4" id="price${data.id}">₱ ${data.price}.00</p>
 
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                  <button class="btn btn-sm btn-addToCart me-3" onclick="addToCart(${data.id})"><i class="bi bi-eye me-2"></i>View</button>
-                  <button class="btn btn-sm btn-addToCart" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus me-2"></i>Add</button>
+                  <button class="btn btn-sm btn-addToCart" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus me-2"></i>Add To Cart</button>
               </div>
           </div>
       </div>
@@ -836,7 +835,7 @@ function updateProductList(productsToDisplay) {
               <p class="card-text text-dark text-center mb-3" id="price${data.id}">₱ ${data.price}.00</p>
 
               <div class="container d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-                <button class="btn btn-sm" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus"></i></button>
+                <button class="btn btn-sm btn-addToCart" onclick="addToCart(${data.id})"><i class="bi bi-cart-plus me-2"></i>Add To Cart</button>
               </div>
           </div>
         </div>
