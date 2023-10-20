@@ -386,14 +386,6 @@
     <script src="js/products.js"></script>
 
     <script>
-        // REQUIRES LOGIN IF "LOGIN" KEY IS NOT PRESENT
-        function redirectToLoginPageIfNotLoggedIn(redirectPage) {
-            if (!sessionStorage.getItem('login')) {
-                window.location.href = redirectPage;
-            }
-        }
-        redirectToLoginPageIfNotLoggedIn('login.html');
-
         // HIDES CHECKOUT BUTTON IS CART IS EMPTY
         function toggleCheckoutButtonVisibility() {
             const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -405,9 +397,34 @@
                 checkoutButton.style.display = "block";
             }
         }
-        window.addEventListener("load", toggleCheckoutButtonVisibility);
-    </script>
 
+        function updateLoginText() {
+            if (sessionStorage.getItem("login")) {
+                const loginLink = document.getElementById("login-link");
+                const loginLinkSidebar = document.getElementById("login-link-sidebar");
+                if (loginLink) {
+                    loginLink.innerHTML = '<span class="menu-text">Account</span>';
+                    loginLink.href = "account.html";
+                }
+                if (loginLinkSidebar) {
+                    loginLinkSidebar.innerHTML = '<span class="menu-text">Account</span>';
+                    loginLinkSidebar.href = "account.html";
+                }
+            }
+        }
+
+        // REQUIRES LOGIN IF "LOGIN" KEY IS NOT PRESENT
+        function redirectToLoginPageIfNotLoggedIn(redirectPage) {
+            if (!sessionStorage.getItem('login')) {
+                window.location.href = redirectPage;
+            }
+        }
+
+        // Call the functions
+        window.addEventListener("load", toggleCheckoutButtonVisibility);
+        updateLoginText();
+        redirectToLoginPageIfNotLoggedIn('login.html');
+    </script>
 
     <script>
         $(".off-canvas-btn").on("click", function () {
@@ -419,26 +436,6 @@
             $("body").removeClass("fix");
             $(".off-canvas-wrapper").removeClass("open");
         });
-
-        if (sessionStorage.getItem("login")) {
-            const loginLink = document.getElementById("login-link");
-            const loginLinkSidebar = document.getElementById("login-link-sidebar");
-            if (loginLink) {
-                loginLink.innerHTML = '<span class="menu-text">Account</span>';
-                loginLink.href = "account.html";
-            }
-            if (loginLinkSidebar) {
-                loginLinkSidebar.innerHTML = '<span class="menu-text">Account</span>';
-                loginLinkSidebar.href = "account.html";
-            }
-        }
-
-        function redirectToLoginPageIfNotLoggedIn(redirectPage) {
-            if (!sessionStorage.getItem('login')) {
-                window.location.href = redirectPage;
-            }
-        }
-        redirectToLoginPageIfNotLoggedIn('login.html');
 
         function countCartItems() {
             const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
