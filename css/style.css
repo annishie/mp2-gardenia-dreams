@@ -2841,6 +2841,7 @@ mark {
 
 .footer-area .footer-copyright-area .copyright-content p {
   margin-bottom: 0px;
+  font-size: 12px;
 }
 
 .footer-area .footer-copyright-area .copyright-content a {
@@ -2864,6 +2865,26 @@ mark {
 /*-- Shop Sidebar Area Start --*/
 
 /* Additional c/o PRECIOUS */
+
+.careers-area h2 {
+  color: #4b0082;
+  padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .careers-area h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .careers-area p {
+    font-size: 12px;
+  }
+}
+
+.careers-area img {
+  width: 600px;
+}
 
 .payment-section,
 .profile-section {

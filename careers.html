@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Careers | Gardenia Dreams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- CSS Files -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/vendor/font.awesome.min.css">
+    <!-- Linear Icons CSS -->
+    <link rel="stylesheet" href="css/vendor/linearicons.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="css/plugins/animate.min.css">
+    <!-- Jquery ui CSS -->
+    <link rel="stylesheet" href="css/plugins/jquery-ui.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/plugins/nice-select.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar-->
+    <header class="main-header-area navbar-expand-sm fixed-top">
+        <nav class="navbar navbar-expand-sm" style="height: 80px;">
+            <div class="main-header header-transparent header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-xl-2 col-md-6 col-6 col-custom">
+                            <div class="header-logo d-flex align-items-center">
+                                <a href="index.html">
+                                    <img class="img-full" src="img/gd-logo-preview.png" alt="Header Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 d-none d-lg-flex justify-content-center col-custom">
+                            <nav class="main-nav d-none d-lg-flex">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="index.html">
+                                            <span class="menu-text">Home</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">
+                                            <span class="menu-text">Shop</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">
+                                            <span class="menu-text">About</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact-us.html">
+                                            <span class="menu-text">Contact Us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="login-link" href="login.html">
+                                            <span class="menu-text">Log In</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-6 col-custom">
+                            <div class="header-right-area main-nav">
+                                <ul class="nav">
+                                    <li class="minicart-wrap">
+                                        <a href="cart.html" class="minicart-btn toolbar-btn">
+                                            <i class="bi bi-cart-fill"></i>
+                                            <span class="cart-item_count" id="cartNotifCount"></span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-wrap">
+                                        <a href="#"><i class="bi bi-search"></i> </a>
+                                        <ul class="dropdown-sidemenu dropdown-hover-2 dropdown-search">
+                                            <li>
+                                                <form action="#">
+                                                    <input name="search" id="search" placeholder="Search" type="text">
+                                                    <button type="submit"><i class="bi bi-search"></i></button>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mobile-menu-btn d-lg-none">
+                                        <a class="off-canvas-btn" href="#">
+                                            <i class="bi bi-list"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Header Area End -->
+
+            <!-- Mobile View Navbar -->
+            <aside class="off-canvas-wrapper" id="mobileMenu">
+                <div class="off-canvas-overlay"></div>
+                <div class="off-canvas-inner-content">
+                    <div class="btn-close-off-canvas">
+                        <i class="bi bi-x"></i>
+                    </div>
+                    <div class="off-canvas-inner">
+                        <div class="search-box-offcanvas">
+                            <img src="img/gd-logo-preview.png" alt="">
+                        </div>
+                        <div class="mobile-navigation">
+                            <nav>
+                                <ul class="mobile-menu">
+                                    <li class="menu-item-has-children"><a href="index.html">Home</a></li>
+                                    <li class="menu-item-has-children"><a href="shop.html">Shop</a></li>
+                                    <li class="menu-item-has-children"><a href="about.html">About</a></li>
+                                    <li class="menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="login.html" id="login-link-sidebar">
+                                            <span class="menu-text">Log In</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="offcanvas-widget-area">
+                            <div class="top-info-wrap text-left text-black">
+                                <ul class="address-info" style="font-size: 12px;">
+                                    <li>
+                                        <i class="bi bi-geo-alt"></i>
+                                        <a href="">123 Happy St., Metro Manila, PH</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-telephone"></i>
+                                        <a href="">(+63) 123 4567 890</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-envelope"></i>
+                                        <a href="">info@gardeniadreams.com</a>
+                                    </li>
+                                </ul>
+                                <div class="widget-social">
+                                    <a class="rounded-circle" href="#" title="Facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+
+                                    <a class="rounded-circle" href="#" title="Facebook">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+
+                                    <a class="rounded-circle" href="#" title="Facebook">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+
+                                    <a class="rounded-circle" href="#" title="Facebook">
+                                        <i class="bi bi-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+    </header>
+
+    <!-- Hero/Breadcrumb -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Gardenia Dreams</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Careers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Careers Section -->
+    <div class="careers-area my-5">
+        <div class="container text-center">
+            <h2 class="fw-bold">Career Opportunities</h2>
+            <p class="text-dark">We're always looking for talented individuals to join our team. Check back soon for
+                career
+                opportunities with Gardenia Dreams.</p>
+            <img src="img/resume-review.png" alt="Careers" class="img-fluid">
+        </div>
+    </div>
+
+
+    <!--Footer -->
+    <footer class=" footer-area">
+        <div class="footer-widget-area">
+            <div class="container container-default custom-area">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-custom">
+                        <div class="single-footer-widget m-0">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="img/gd-text.png" alt="Logo Image">
+                                </a>
+                            </div>
+                            <p class="desc-content">Make smiles and make lasting memories with your loved ones.
+                            </p>
+                            <div class="social-links">
+                                <ul class="d-flex">
+                                    <li>
+                                        <a class="rounded-circle" href="#" title="Facebook">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-circle" href="#" title="Twitter">
+                                            <i class="bi bi-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-circle" href="#" title="Linkedin">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-circle" href="#" title="Youtube">
+                                            <i class="bi bi-youtube"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-custom">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">Information</h2>
+                            <ul class="widget-list">
+                                <li><a href="">Our Company</a></li>
+                                <li><a href="">Our Services</a></li>
+                                <li><a href="">Why We?</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-custom">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">Quick Links</h2>
+                            <ul class="widget-list">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Shop</a></li>
+                                <li><a href="">Log In</a></li>
+                                <li><a href="">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-custom">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">Support</h2>
+                            <ul class="widget-list">
+                                <li><a href="">Online Support</a></li>
+                                <li><a href="">Shipping Policy</a></li>
+                                <li><a href="">Return Policy</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-custom">
+                        <div class="single-footer-widget">
+                            <h2 class="widget-title">Get In Touch</h2>
+                            <div class="widget-body">
+                                <address><i class="bi bi-geo-alt me-2"></i>123 Happy St., Metro Manila,
+                                    Philippines<br><i class="bi bi-telephone me-2"></i>Phone:
+                                    (+63)
+                                    456 7890 123<br><i class="bi bi-envelope me-2"></i>Email:
+                                    info@gardeniadreams.com
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container custom-area">
+                <div class="row">
+                    <div class="col-12 text-center col-custom">
+                        <div class="copyright-content">
+                            <p>This site was developed by Ann Marie and Precious as a KodeGo mini-project. All
+                                acknowledgements are attributed to the owner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="scroll-to-top" href="#">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- JS Files-->
+    <!-- jQuery JS -->
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Migrate JS -->
+    <script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <!-- Modernizer JS -->
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="js/plugins/swiper-bundle.min.js"></script>
+    <!-- nice select JS -->
+    <script src="js/plugins/nice-select.min.js"></script>
+    <!-- Ajaxchimpt js -->
+    <script src="js/plugins/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Ui js -->
+    <script src="js/plugins/jquery-ui.min.js"></script>
+    <!-- Jquery Countdown js -->
+    <script src="js/plugins/jquery.countdown.min.js"></script>
+    <!-- jquery magnific popup js -->
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+    <script>
+        $(".off-canvas-btn").on("click", function () {
+            $("body").addClass("fix");
+            $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+            $("body").removeClass("fix");
+            $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        if (sessionStorage.getItem("login")) {
+            const loginLink = document.getElementById("login-link");
+            const loginLinkSidebar = document.getElementById("login-link-sidebar");
+            if (loginLink) {
+                loginLink.innerHTML = '<span class="menu-text">Account</span>';
+                loginLink.href = "account.html";
+            }
+            if (loginLinkSidebar) {
+                loginLinkSidebar.innerHTML = '<span class="menu-text">Account</span>';
+                loginLinkSidebar.href = "account.html";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
