@@ -423,7 +423,7 @@ mark {
   font-family: "Josefin Slab", serif;
   font-weight: 700;
   margin-bottom: 0px;
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
   text-transform: uppercase;
 }
 
@@ -2841,6 +2841,7 @@ mark {
 
 .footer-area .footer-copyright-area .copyright-content p {
   margin-bottom: 0px;
+  font-size: 12px;
 }
 
 .footer-area .footer-copyright-area .copyright-content a {
@@ -2864,6 +2865,31 @@ mark {
 /*-- Shop Sidebar Area Start --*/
 
 /* Additional c/o PRECIOUS */
+
+.careers-area h2,
+.privacy-policy-area h2 {
+  color: #4b0082;
+  padding: 15px 0;
+}
+
+/* .privacy-policy-area h2 {
+  color: #4b0082;
+} */
+
+@media (max-width: 767px) {
+  .careers-area h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .careers-area p {
+    font-size: 12px;
+  }
+}
+
+.careers-area img {
+  width: 600px;
+}
 
 .payment-section,
 .profile-section {
@@ -7806,7 +7832,7 @@ mark {
 }
 
 .breadcrumbs-area .breadcrumb-content ul li a {
-  font-size: 18px;
+  font-size: 14px;
   color: #000000;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -8040,29 +8066,15 @@ mark {
     padding: 35px 20px;
   }
 
-        .table-responsive {
-            display: block;
-        }
+  .copyright-text {
+    font-size: 12px;
+  }
 
-        .table-responsive thead {
-            display: none;
-        }
-
-        .table-responsive tbody tr {
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .table-responsive tbody td {
-            display: block;
-            text-align: left;
-        }
-
-        .table-responsive tbody td::before {
-            content: attr(data-th) ": ";
-            font-weight: bold;
-        }
-
+  /* CONTACT */
+  .contact-desc {
+    font-size: 12px;
+    padding: 0 20px;
+  }
 } 
 
 /*-----Footlinks----*/

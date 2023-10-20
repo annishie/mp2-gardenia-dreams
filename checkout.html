@@ -69,7 +69,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="contact-us.html">
                                             <span class="menu-text">Contact Us</span>
                                         </a>
                                     </li>
@@ -131,7 +131,7 @@
                                     <li class="menu-item-has-children"><a href="">Home</a></li>
                                     <li class="menu-item-has-children"><a href="shop.html">Shop</a></li>
                                     <li class="menu-item-has-children"><a href="about.html">About</a></li>
-                                    <li class="menu-item-has-children"><a href="">Contact Us</a></li>
+                                    <li class="menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
                                     <li class="menu-item-has-children">
                                         <a href="login.html" id="login-link-sidebar">
                                             <span class="menu-text">Log In</span>
@@ -318,7 +318,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn btn-place-order" data-bs-toggle="modal" data-bs-target="#placeOrder">Place
+                        <button class="btn btn-place-order" id="transferToOrderButton">Place
                             Order</button>
                     </div>
                 </div>
@@ -550,11 +550,54 @@
         }
         displayTotal();
 
-        // PLACE ORDER
-        function placeOrder() {
-            localStorage.removeItem("cart");
-            alert("You have successfully placed this order.");
-            window.location.href = 'shop.html';
+
+        // PLACE ORDERING
+        function transferCartToOrderHistory() {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cartItems.length > 0) {
+                const orderHistory = JSON.parse(localStorage.getItem("order")) || [];
+
+                // FETCH ORDER INFORMATION
+                const order = {
+                    timestamp: new Date().toISOString(),
+                    itemCount: cartItems.length,
+                    totalAmount: calculateTotal(cartItems),
+                    status: "For Delivery"
+                };
+
+                orderHistory.push(order);
+
+                localStorage.setItem("order", JSON.stringify(orderHistory));
+                localStorage.setItem("cart", JSON.stringify([]));
+
+                // Clear cart
+                const cartTableBody = document.getElementById("cart-div");
+                cartTableBody.innerHTML = "<tr><td colspan='6' class='text-center'>No items added yet.</td></tr>";
+            }
+        }
+
+        // SUM AMOUNT
+        function calculateTotal(cartItems) {
+            let total = 0;
+
+            for (const item of cartItems) {
+                if (item.price) {
+                    total += parseFloat(item.price);
+                }
+            }
+            return total;
+        }
+
+
+        const transferToOrderButton = document.getElementById("transferToOrderButton");
+
+        if (transferToOrderButton) {
+            transferToOrderButton.addEventListener("click", () => {
+                transferCartToOrderHistory();
+                alert("Order successfully placed.");
+                location.replace("cart.html");
+            });
         }
     </script>
 

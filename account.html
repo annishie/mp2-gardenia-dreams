@@ -69,7 +69,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="contact-us.html">
                                             <span class="menu-text">Contact Us</span>
                                         </a>
                                     </li>
@@ -131,7 +131,7 @@
                                     <li class="menu-item-has-children"><a href="">Home</a></li>
                                     <li class="menu-item-has-children"><a href="shop.html">Shop</a></li>
                                     <li class="menu-item-has-children"><a href="about.html">About</a></li>
-                                    <li class="menu-item-has-children"><a href="">Contact Us</a></li>
+                                    <li class="menu-item-has-children"><a href="contact-us.html">Contact Us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -213,69 +213,22 @@
             </ul>
             <div class="tab-content pt-3" id="myTabContent">
                 <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                    <table class="table table-bordered table-hover text-center mt-3">
+                    <!-- Add this HTML code for the table -->
+                    <table class="table table-bordered table-hover text-center mt-3" id="order-table">
                         <thead>
                             <tr>
                                 <th scope="col">Date Ordered</th>
                                 <th scope="col">No. Of Items</th>
                                 <th scope="col">Order Amount</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Action</th>
+                                <!-- <th scope="col">Action</th> -->
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope="row">October 4, 2023 2:01AM</td>
-                                <td>3 item(s)</td>
-                                <td>₱ 9,438.00</td>
-                                <td><i class="bi bi-hourglass-split me-2"></i>Pending</td>
-                                <td>
-                                    <button class="btn btn-sm me-3"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm"><i class="bi bi-trash"></i></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">September 12, 2023 11:11AM</td>
-                                <td>7 item(s)</td>
-                                <td>₱ 24,738.00</td>
-                                <td><i class="bi bi-check-circle me-2"></i>Order Received</td>
-                                <td>
-                                    <button class="btn btn-sm me-3"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm"><i class="bi bi-trash"></i></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">August 20, 2023 3:22PM</td>
-                                <td>1 item(s)</td>
-                                <td>₱ 4,138.00</td>
-                                <td><i class="bi bi-check-circle me-2"></i>Order Received</td>
-                                <td>
-                                    <button class="btn btn-sm me-3"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm"><i class="bi bi-trash"></i></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">August 1, 2023 09:10AM</td>
-                                <td>1 item(s)</td>
-                                <td>₱ 3,138.00</td>
-                                <td><i class="bi bi-check-circle me-2"></i>Order Received</td>
-                                <td>
-                                    <button class="btn btn-sm me-3"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm"><i class="bi bi-trash"></i></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">July 28, 2023 12:08PM</td>
-                                <td>5 item(s)</td>
-                                <td>₱ 16,338.00</td>
-                                <td><i class="bi bi-check-circle me-2"></i>Order Received</td>
-                                <td>
-                                    <button class="btn btn-sm me-3"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm"><i class="bi bi-trash"></i></i></button>
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
+
                 </div>
                 <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                     <div class="row d-flex justify-content-end">
@@ -510,6 +463,41 @@
                 loginLinkSidebar.href = "account.html";
             }
         }
+
+        // DISPLAYING ORDER HISTORY
+        const orderHistory = JSON.parse(localStorage.getItem("order")) || [];
+        const tableBody = document.getElementById("order-table").getElementsByTagName("tbody")[0];
+
+        // DISPLAYING ORDER INFO INTO TABLE
+        for (const order of orderHistory) {
+            const row = tableBody.insertRow(0);
+            const dateCell = row.insertCell(0);
+            const itemCountCell = row.insertCell(1);
+            const orderAmountCell = row.insertCell(2);
+            const statusCell = row.insertCell(3);
+
+            // DATE FORMATTING
+            const dateOrdered = new Date(order.timestamp);
+
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true,
+            };
+
+            const formattedDate = dateOrdered.toLocaleString('en-US', options);
+            console.log(formattedDate);
+
+
+            dateCell.innerText = formattedDate;
+            itemCountCell.innerText = `${order.itemCount} item(s)`;
+            orderAmountCell.innerText = `₱ ${order.totalAmount.toFixed(2)}`;
+            statusCell.innerHTML = `<i class="bi bi-hourglass-split me-2"></i>${order.status}`;
+        }
+
 
         // LOGOUT
         function logout() {
