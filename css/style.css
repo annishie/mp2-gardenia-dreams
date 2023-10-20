@@ -423,7 +423,7 @@ mark {
   font-family: "Josefin Slab", serif;
   font-weight: 700;
   margin-bottom: 0px;
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
   text-transform: uppercase;
 }
 
@@ -8042,5 +8042,11 @@ mark {
 
   .copyright-text {
     font-size: 12px;
+  }
+
+  /* CONTACT */
+  .contact-desc {
+    font-size: 12px;
+    padding: 0 20px;
   }
 } 
