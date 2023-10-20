@@ -2866,10 +2866,15 @@ mark {
 
 /* Additional c/o PRECIOUS */
 
-.careers-area h2 {
+.careers-area h2,
+.privacy-policy-area h2 {
   color: #4b0082;
-  padding: 20px 0;
+  padding: 15px 0;
 }
+
+/* .privacy-policy-area h2 {
+  color: #4b0082;
+} */
 
 @media (max-width: 767px) {
   .careers-area h2 {
