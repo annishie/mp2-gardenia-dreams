@@ -137,3 +137,5 @@ function deleteThisItem(index) {
 
 displayCartItems();
 displayTotal();
+
+

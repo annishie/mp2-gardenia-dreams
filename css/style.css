@@ -8040,27 +8040,7 @@ mark {
     padding: 35px 20px;
   }
 
-        .table-responsive {
-            display: block;
-        }
-
-        .table-responsive thead {
-            display: none;
-        }
-
-        .table-responsive tbody tr {
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .table-responsive tbody td {
-            display: block;
-            text-align: left;
-        }
-
-        .table-responsive tbody td::before {
-            content: attr(data-th) ": ";
-            font-weight: bold;
-        }
-
+  .copyright-text {
+    font-size: 12px;
+  }
 } 

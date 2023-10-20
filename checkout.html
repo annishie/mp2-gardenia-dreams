@@ -318,7 +318,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn btn-place-order" data-bs-toggle="modal" data-bs-target="#placeOrder">Place
+                        <button class="btn btn-place-order" id="transferToOrderButton">Place
                             Order</button>
                     </div>
                 </div>
@@ -556,6 +556,35 @@
             alert("You have successfully placed this order.");
             window.location.href = 'shop.html';
         }
+
+
+        function transferCartToOrderHistory() {
+            const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cartItems.length > 0) {
+                const orderHistory = JSON.parse(localStorage.getItem("order")) || [];
+                orderHistory.push(...cartItems);
+
+                localStorage.setItem("order", JSON.stringify(orderHistory));
+                localStorage.setItem("cart", JSON.stringify([]));
+
+                // Clear the cart display
+                const cartTableBody = document.getElementById("cart-div");
+                cartTableBody.innerHTML = "<tr><td colspan='6' class='text-center'>No items added yet.</td></tr>";
+            }
+        }
+
+
+        const transferToOrderButton = document.getElementById("transferToOrderButton");
+
+        if (transferToOrderButton) {
+            transferToOrderButton.addEventListener("click", () => {
+                transferCartToOrderHistory();
+                alert("Order successfully placed.");
+                location.replace("cart.html");
+            });
+        }
+
     </script>
 
 
