@@ -733,8 +733,8 @@ const products = {
       <div class="card mb-3 position-relative">
           <p id="ids${data.id}" hidden>${data.id}</p>
 
-          <img id="image${data.id}" src="${data.image}" class="img-fluid pt-2 px-2">
 
+          <img id="image${data.id}" src="${data.image}" class="img-fluid pt-2 px-2">
 
           <div class="card-body">
               <p class="card-title fw-bold text-dark text-center" id="menu${data.id}">${data.productName}</p>
