@@ -641,6 +641,7 @@ function renderProducts() {
                 </div>
               </div>
         `;
+console.log(1.)
 
     return productCard.outerHTML;
   });
