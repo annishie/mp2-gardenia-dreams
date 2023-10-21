@@ -7235,33 +7235,6 @@ mark {
   transition-delay: 700ms;
 }
 
-.onsale {
-  background: #df0c0c;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  height: 100px;
-  right: auto;
-  line-height: 160px;
-  min-height: auto;
-  min-width: auto;
-  position: absolute;
-  left: -50px;
-  text-align: center;
-  text-shadow: none;
-  text-transform: none;
-  top: -50px;
-  width: 100px;
-  z-index: 2;
-  border-radius: 0;
-  -webkit-transform: rotate(-45deg) translateZ(0) scale(1, 1);
-  transform: rotate(-45deg) translateZ(0) scale(1, 1);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
 
 .product-row.row .product-slider {
   padding: 15px;
@@ -8206,35 +8179,6 @@ mark {
   color: #777;
 }
 
-/* Default styles for screens with a width greater than 991px */
-#blog {
-  background-color: #f4f4f4;
-}
-
-/* Styles for screens with a maximum width of 991px */
-@media (max-width: 991px) {
-  #blog {
-      background-color: #ccc; /* Change the background color for screens <= 991px */
-  }
-}
-
-/* Styles for screens with a maximum width of 767px */
-@media (max-width: 767px) {
-  #blog {
-      background-color: #eee; /* Change the background color for screens <= 767px */
-  }
-}
-
-/* Styles for screens with a maximum width of 575px */
-@media (max-width: 575px) {
-  #blog {
-      background-color: #f0f0f0; /* Change the background color for screens <= 575px */
-  }
-}
-#blog {
-  margin: 0 auto; 
-  max-width: 800px; 
-}
 
 /* Additional styles can be added as needed. */
 
