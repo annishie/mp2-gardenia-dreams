@@ -625,7 +625,6 @@ function renderProducts() {
                     <img src="${product.image2}" alt="" class="product-image-2 position-absolute w-100">
                     <img src="${product.image3}" alt="" class="product-image-3 position-absolute w-100">
 
-                  <span class="onsale">Sale!</span>
                     
                 </div>
 
