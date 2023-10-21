@@ -874,3 +874,15 @@ function sortProducts(sortOrder) {
 
   updateProductList(sortedProducts);
 }
+
+// Share my location for the kineme design hahaha****
+function getLocation() {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      successCallback,
+      errorCallback
+    );
+  } else{
+    console.log("Geolocation is not supported in this browser");
+  }
+}

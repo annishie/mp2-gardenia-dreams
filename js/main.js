@@ -631,7 +631,7 @@ function renderProducts() {
 
                 <div class="product-content">
                   <div class="product-title">
-                      <h4 class="title-2"> <a href="product-details.html">${product.title}</a></h4>
+                      <h4 class="title-2"> <a href="shop.html">${product.title}</a></h4>
                   </div>
 
                   <div class="price-box">
