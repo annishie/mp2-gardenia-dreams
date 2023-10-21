@@ -7488,64 +7488,64 @@ mark {
   height: 150px;
 }
 
-@media (max-width: 767px) {
-  .testimonial-img img {
-    width: 130px;
-    height: 130px;
+  @media (max-width: 767px) {
+    .testimonial-img img {
+      width: 130px;
+      height: 130px;
+    }
   }
-}
 
-@media (max-width: 575px) {
-  .testimonial-img img {
-    width: 100px;
-    height: 100px;
+  @media (max-width: 575px) {
+    .testimonial-img img {
+      width: 100px;
+      height: 100px;
+    }
   }
-}
 
-@media (max-width: 575px) {
-  .testimonial-img {
-    margin-bottom: 20px;
-    margin-top: 10px;
+  @media (max-width: 575px) {
+    .testimonial-img {
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
   }
-}
 
-.testimonial-content > p {
-  font-size: 20px;
-  line-height: 32px;
-  margin: 0 auto 25px auto;
-  max-width: 800px;
-  position: relative;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
   .testimonial-content > p {
-    max-width: 640px;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 auto 25px auto;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
   }
-}
 
-@media (max-width: 767px) {
-  .testimonial-content > p {
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 28px;
+  @media (max-width: 991px) {
+    .testimonial-content > p {
+      max-width: 640px;
+    }
   }
-}
 
-@media (max-width: 575px) {
-  .testimonial-content > p {
-    max-width: 400px;
-    font-size: 14px;
+  @media (max-width: 767px) {
+    .testimonial-content > p {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
-}
 
-@media (max-width: 479px) {
-  .testimonial-content > p {
-    max-width: 280px;
-    font-size: 13px;
-    line-height: 24px;
+  @media (max-width: 575px) {
+    .testimonial-content > p {
+      max-width: 400px;
+      font-size: 14px;
+    }
   }
-}
+
+  @media (max-width: 479px) {
+    .testimonial-content > p {
+      max-width: 280px;
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
 
 .testimonial-author > h6 {
   color: #4b0082;
@@ -8080,6 +8080,164 @@ mark {
 
 
 /*Blog*/
+
+/* Set a background color for the whole section */
+#blog {
+  background-color: #f4f4f4;
+}
+
+/* Style the blog main area */
+.blog-main-area {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the blog image */
+.blog-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Style the blog title */
+.blog-text h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style the blog post info */
+.blog-post-info span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Style the blog content text */
+.blog-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Style the "Read More" link */
+.readmore {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.readmore:hover {
+  background-color: #0056b3;
+}
+
+/* Style the sidebar */
+.sidebar_widget {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the search input */
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the category and tags lists */
+.sidebar-list li, .tags li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.sidebar-list a, .tags a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style the recent products section */
+.sidebar-product {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sidebar-product .image {
+  flex: 1;
+}
+
+.sidebar-product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.sidebar-product .product-content {
+  flex: 2;
+  padding-left: 10px;
+}
+
+/* Style the pagination */
+.pagination ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+/* Style the bottom toolbar */
+.toolbar-bottom {
+  margin-top: 20px;
+}
+
+.desc-content {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Default styles for screens with a width greater than 991px */
+#blog {
+  background-color: #f4f4f4;
+}
+
+/* Styles for screens with a maximum width of 991px */
+@media (max-width: 991px) {
+  #blog {
+      background-color: #ccc; /* Change the background color for screens <= 991px */
+  }
+}
+
+/* Styles for screens with a maximum width of 767px */
+@media (max-width: 767px) {
+  #blog {
+      background-color: #eee; /* Change the background color for screens <= 767px */
+  }
+}
+
+/* Styles for screens with a maximum width of 575px */
+@media (max-width: 575px) {
+  #blog {
+      background-color: #f0f0f0; /* Change the background color for screens <= 575px */
+  }
+}
+#blog {
+  margin: 0 auto; 
+  max-width: 800px; 
+}
+
+/* Additional styles can be added as needed. */
+
 /*Careers*/
 /*Contact Us*/
 /*Our Company*/
