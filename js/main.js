@@ -634,8 +634,8 @@ function renderProducts() {
 
                   <div class="price-box">
                       <span class="regular-price ">₱${product.price}</span>
-                      <span class="old-price"><del>₱${product.oldPrice}</del></span>
                   </div>
+                  <a href="shop.html" class="btn product-cart">Add to Cart</a>
                 </div>
               </div>
         `;
