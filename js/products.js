@@ -875,7 +875,7 @@ function sortProducts(sortOrder) {
   updateProductList(sortedProducts);
 }
 
-// Share my location for the kineme design hahaha****
+// Share my location for the kineme design hahaha pero next time nalang to****
 function getLocation() {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
